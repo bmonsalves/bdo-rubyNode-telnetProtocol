@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Online chat</title>
+	<%= stylesheet_link_tag "style.css" %>
+</head>
+<body>
+	<div class="container">
+
+		<h2> enviar mensaje </h2>
+
+		<%= form_tag({:controller => "welcome", :action => "index"}, :method => "post") do %>
+		   <%= label_tag "texto", "ingresar texto" %>
+		   <br />
+		   <%= text_field_tag "texto", "", :required => "required" %>
+			<br />
+		   <%= submit_tag "Enviar texto" %>
+		<% end %>
+
+		<% if @comentario %>
+		   <p> <strong class="comentario"><%= @comentario[:texto] %></strong></p>
+		<% end %>
+
+	</div>
+
+</body>
+</html>

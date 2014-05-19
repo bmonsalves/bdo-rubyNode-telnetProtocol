@@ -1,0 +1,41 @@
+body
+{
+    color: #FFF;
+    background: #6db33f;
+    font-family: "Helvetica", Arial;
+    font-size: 14px;
+    text-align: center;
+}
+.container
+{
+    background: #4d71bf;
+    box-shadow: 0px 5px 5px rgba(0,0,0,0.5);
+    text-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+    margin: 1em auto;
+    padding: 1em;
+    width: 90%;
+}
+ 
+input
+{
+    display: block;
+    font-size: 12px;
+    margin: 1em auto;
+    padding: 0.5em;
+    width: 95%;
+}
+ 
+span
+{
+    display: block;
+    font-size: 12px;
+    margin: 1em auto;
+    padding: 0.5em;
+    width: 95%;
+    text-align: left;
+}
+
+.comentario
+{
+	font-size: 3em;
+}
