@@ -12,16 +12,20 @@ class WelcomeController < ApplicationController
   end
 
   def telnetServer(texto)
-  	
+
+  	respuesta=''
 	webserver = Net::Telnet::new('Host' => 'localhost',
-	                             'Port' => 4001,
-	                             'Telnetmode' => false)
+	                             'Port' => 4001
+	                             )
 
 	webserver.puts(texto)
 
 	webserver.waitfor(/\n/) do |txt|
-  		return txt
+		respuesta = respuesta << txt
 	end
+
+	return respuesta
+
   end
 
 end
